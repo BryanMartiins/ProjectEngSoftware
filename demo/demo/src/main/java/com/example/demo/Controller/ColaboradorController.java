@@ -22,7 +22,6 @@ public class ColaboradorController {
         return colaboradorService.ListarColaborador();
 
     }
-
     @PostMapping("")
     public ResponseEntity<Colaborador> SalvarColaborador(@RequestBody Colaborador colaborador){
         Boolean response = colaboradorService.SalvarColaborador(colaborador);

@@ -1,8 +1,10 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Model.Administrador;
+import com.example.demo.Repository.AdministradorRepository;
 import com.example.demo.Service.AdministradorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +30,32 @@ public class AdministradorController {
             return ResponseEntity.status(HttpStatus.CREATED).body(administrador);
         }
         else{
-            return ResponseEntity.status(HttpStatus.CREATED).body(administrador);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(administrador);
         }
     }
 
+    @PutMapping
+    public ResponseEntity<Administrador> alterarAdministrador(@RequestBody Administrador administrador){
+       boolean response = administradorService.alterarAdminitrador(administrador);
+       if(response == Boolean.TRUE){
+           return  ResponseEntity.status(HttpStatus.ACCEPTED).body(administrador);
+       }
+       else{
+           return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body(administrador);
+
+       }
+    }
+    @DeleteMapping
+    public ResponseEntity<Administrador> deletarAdministrador(@RequestBody Administrador administrador){
+        boolean response = administradorService.deletarAdministrador(administrador);
+        if(response == Boolean.TRUE) {
+            return ResponseEntity.status(HttpStatus.ACCEPTED).body(administrador);
+        }
+        else{
+            return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body(administrador);
+        }
+    }
+
+
 }
+

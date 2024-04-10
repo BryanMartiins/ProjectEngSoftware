@@ -4,28 +4,30 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-
 import java.io.Serial;
+import java.util.Date;
 
 @Data
-@Table(name= "Alunos")
-@Entity(name="Alunos")
+@Table(name = "Eventos")
+@Entity(name = "Eventos")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Aluno {
 
+public class Evento{
     @Serial
+
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long Id;
-    private String RA;
-    private String Nome_Completo;
-    private String CPF;
-    private String email;
-    private String Alun_senha;
+
+    private String nome;
+    private Date data;
+    private Double hora;
+    private String local;
+    private String responsavel;
+    private int vagas;
+    private String descriçao;
 
 }

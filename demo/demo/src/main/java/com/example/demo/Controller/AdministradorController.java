@@ -1,10 +1,8 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Model.Administrador;
-import com.example.demo.Repository.AdministradorRepository;
 import com.example.demo.Service.AdministradorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("Administrador")
 public class AdministradorController {
 
@@ -34,7 +33,7 @@ public class AdministradorController {
         }
     }
 
-    @PutMapping
+    @PutMapping("")
     public ResponseEntity<Administrador> alterarAdministrador(@RequestBody Administrador administrador){
        boolean response = administradorService.alterarAdminitrador(administrador);
        if(response == Boolean.TRUE){
@@ -45,7 +44,7 @@ public class AdministradorController {
 
        }
     }
-    @DeleteMapping
+    @DeleteMapping("/Deletar")
     public ResponseEntity<Administrador> deletarAdministrador(@RequestBody Administrador administrador){
         boolean response = administradorService.deletarAdministrador(administrador);
         if(response == Boolean.TRUE) {

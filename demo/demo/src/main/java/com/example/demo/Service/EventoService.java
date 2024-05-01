@@ -41,7 +41,7 @@ public class EventoService{
         }
     }
     @DeleteMapping
-    public Boolean deletarEvent(Evento evento){
+    public Boolean deletarEvento(Evento evento){
         try{
             eventoRepository.delete(evento);
             return Boolean.TRUE;

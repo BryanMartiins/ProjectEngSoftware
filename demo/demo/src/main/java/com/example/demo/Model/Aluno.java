@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 
+
 @Data
 @Table(name= "Alunos")
 @Entity(name="Alunos")
@@ -23,7 +24,8 @@ public class Aluno {
 
     private Long Id;
     private String RA;
-    private String Nome_Completo;
+    @Column(name = "nome_completo")
+    private String NomeCompleto;
     private String CPF;
     private String email;
     private String Alun_senha;

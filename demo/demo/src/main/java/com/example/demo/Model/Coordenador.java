@@ -3,7 +3,6 @@ package com.example.demo.Model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 import java.io.Serial;
@@ -13,7 +12,7 @@ import java.io.Serial;
 @Table(name = "Colaborador")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Colaborador {
+public class Coordenador {
 
     @Serial
     private static final long serialVersionUID = 1L;

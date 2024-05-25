@@ -1,16 +1,17 @@
 package com.example.demo.Service;
 
-import com.example.demo.Model.Administrador;
 import com.example.demo.Model.Aluno;
 import com.example.demo.Repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
 import java.util.List;
+
+
+
 @CrossOrigin("*")
 @Service
 public class AlunoService {
@@ -38,7 +39,7 @@ public class AlunoService {
         List<Aluno> contens = new ArrayList<>();
 
         for(Aluno aluno: todosAlunos){
-            if (aluno.getNome_Completo().contains(pesquisa)){
+            if (aluno.getNomeCompleto().contains(pesquisa)){
                 contens.add(aluno);
 
             }

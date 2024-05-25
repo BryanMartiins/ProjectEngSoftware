@@ -1,7 +1,6 @@
 package com.example.demo.Service;
 
 import com.example.demo.Model.Professor;
-import com.example.demo.Repository.ColaboradorRepository;
 import com.example.demo.Repository.ProfessorRepository;
 import org.springframework.stereotype.Service;
 

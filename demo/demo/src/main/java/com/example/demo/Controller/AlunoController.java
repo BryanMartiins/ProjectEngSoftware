@@ -15,6 +15,7 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("Aluno")
 public class AlunoController {
+
     @Autowired
     AlunoService alunoService;
 
@@ -30,6 +31,8 @@ public class AlunoController {
     @PostMapping("")
     public ResponseEntity<Aluno> SalvarAluno(@RequestBody Aluno aluno) {
         Boolean response = alunoService.SalvarAluno(aluno);
+
+
         if (response == Boolean.TRUE) {
             return ResponseEntity.status(HttpStatus.CREATED).body(aluno);
         } else {

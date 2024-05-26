@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("Colaborador")
+@RequestMapping("Coordenador")
 
 public class CoordenadorController {
     @Autowired
@@ -18,11 +18,11 @@ public class CoordenadorController {
 
     @GetMapping
     public List<Coordenador> getAll(){
-        return colaboradorService.ListarColaborador();
+        return colaboradorService.ListarCoordenador();
 
     }
     @PostMapping("")
-    public ResponseEntity<Coordenador> SalvarColaborador(@RequestBody Coordenador coordenador){
+    public ResponseEntity<Coordenador> SalvarCoordenador(@RequestBody Coordenador coordenador){
         Boolean response = colaboradorService.SalvarColaborador(coordenador);
         if(response == Boolean.TRUE){
             return ResponseEntity.status(HttpStatus.CREATED).body(coordenador);

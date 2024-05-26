@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 import java.io.Serial;
 
 @Data
-@Entity(name = "Colaborador")
-@Table(name = "Colaborador")
+@Entity(name = "Coordenador")
+@Table(name = "Coordenador")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Coordenador {
@@ -22,9 +22,9 @@ public class Coordenador {
     private Long Id;
 
     private String Chave_Autorizacao;
-    private String Nome_Completo;
+    private String nomeCompleto;
     private String CPF;
-    private String Email;
+    private String email;
     private String Endereço;
     private String Senha;
 

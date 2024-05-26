@@ -14,7 +14,7 @@ public class CoordenadorService {
         this.colaboradorRepository = colaboradorRepository;
     }
 
-    public List<com.example.demo.Model.Coordenador> ListarColaborador() {
+    public List<com.example.demo.Model.Coordenador> ListarCoordenador() {
         return colaboradorRepository.findAll();
     }
 

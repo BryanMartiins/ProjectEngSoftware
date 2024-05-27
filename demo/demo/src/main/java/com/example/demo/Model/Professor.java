@@ -16,6 +16,7 @@ import java.io.Serial;
 public class Professor {
     @Serial
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;

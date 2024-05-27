@@ -36,7 +36,6 @@ public class CoordenadorService {
         } catch (Exception e) {
             return Boolean.FALSE;
         }
-
     }
     @DeleteMapping
     public Boolean deletarColaborador (com.example.demo.Model.Coordenador colaborador){

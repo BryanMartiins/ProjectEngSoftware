@@ -27,5 +27,14 @@ public class ProfessorService {
             return Boolean.FALSE;
         }
     }
+    public Boolean alterarProfessor(com.example.demo.Model.Coordenador professor) {
+
+        try {
+            professorRepository.save(professor);
+            return Boolean.TRUE;
+        } catch (Exception e) {
+            return Boolean.FALSE;
+        }
+    }
 
 }

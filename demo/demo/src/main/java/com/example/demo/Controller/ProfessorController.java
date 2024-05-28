@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("professor")
+@RequestMapping("Professor")
 public class ProfessorController {
     @Autowired
     private ProfessorService professorService;

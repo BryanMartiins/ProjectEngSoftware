@@ -21,8 +21,8 @@ public class Professor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    private String Num_Inscricao;
-    private String Nome_Complete;
+    private String numInscricao;
+    private String NomeCompleto;
     private String CPF;
     private String email;
     private String Endereco;

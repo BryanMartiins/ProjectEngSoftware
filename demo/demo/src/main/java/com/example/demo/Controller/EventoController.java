@@ -45,7 +45,7 @@ public class EventoController {
 
     }
 
-    @DeleteMapping
+    @DeleteMapping("/Deletar")
     public ResponseEntity<Evento> DeletarEvento(@RequestBody Evento evento){
         boolean response = eventoService.deletarEvento(evento);
         if(response == Boolean.TRUE){

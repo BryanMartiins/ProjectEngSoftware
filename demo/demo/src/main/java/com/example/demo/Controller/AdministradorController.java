@@ -28,6 +28,8 @@ public class AdministradorController {
         if(response == Boolean.TRUE){
             return ResponseEntity.status(HttpStatus.CREATED).body(administrador);
         }
+
+
         else{
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(administrador);
         }

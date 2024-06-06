@@ -15,7 +15,6 @@ import java.util.Date;
 
 public class Evento{
     @Serial
-
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -23,7 +22,7 @@ public class Evento{
     private Long Id;
 
     private String nomeEvento;
-    private Date data;
+    private String data;
     private Double hora;
     private String local;
     private String responsavel;

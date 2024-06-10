@@ -22,8 +22,6 @@ public class Evento{
     private Long Id;
 
     private String nomeEvento;
-    private String data;
-    private Double hora;
     private String local;
     private String responsavel;
     private String descriçao;
